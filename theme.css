@@ -1,0 +1,786 @@
+/* ============================================================
+   ARDA — AMOLED Medieval Theme for Obsidian
+   A dark gothic theme with true black backgrounds,
+   burgundy accents, and medieval decorative elements.
+   ============================================================ */
+
+/* ======================
+   1. TYPOGRAPHY (body)
+   Non-color variables go under body per guidelines
+   ====================== */
+body {
+  --font-text-size: 17px;
+  --font-interface-theme: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+  --font-text-theme: 'Georgia', 'Garamond', 'Palatino Linotype', serif;
+  --font-monospace-theme: 'Courier New', monospace;
+
+  /* Heading typography */
+  --h1-font: 'Palatino Linotype', 'Book Antiqua', serif;
+  --h2-font: var(--h1-font);
+  --h3-font: var(--h1-font);
+  --h4-font: var(--h1-font);
+  --h5-font: var(--h1-font);
+  --h6-font: var(--h1-font);
+
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 500;
+  --h6-weight: 500;
+
+  --h1-variant: small-caps;
+  --h2-variant: small-caps;
+
+  /* Heading sizes — comfortable cozy scale */
+  --h1-size: 2em;
+  --h2-size: 1.6em;
+  --h3-size: 1.3em;
+  --h4-size: 1.12em;
+  --h5-size: 1.02em;
+  --h6-size: 0.95em;
+
+  --h1-line-height: 1.3;
+  --h2-line-height: 1.35;
+
+  --heading-spacing: 1.6em;
+  --p-spacing: 0.85em;
+
+  /* Inline title — illuminated manuscript style */
+  --inline-title-font: var(--h1-font);
+  --inline-title-weight: 700;
+  --inline-title-size: 2.4em;
+  --inline-title-line-height: 1.2;
+  --inline-title-variant: small-caps;
+
+  /* File layout — generous reading margins */
+  --file-line-width: 720px;
+  --file-margins: 2.5em;
+
+  /* Layout — sharp but with intentional rounding for comfort */
+  --button-radius: 2px;
+  --checkbox-radius: 0px;
+  --modal-radius: 6px;
+  --tag-radius: 2px;
+  --callout-radius: 4px;
+  --tab-radius: 4px;
+
+  /* Lists — Medieval diamond markers */
+  --list-bullet-size: 5px;
+  --list-bullet-radius: 0px;
+  --list-bullet-transform: rotate(45deg);
+  --list-spacing: 0.25em;
+  --list-indent: 2em;
+
+  /* Input styling — Warm medieval edges */
+  --input-radius: 2px;
+  --toggle-radius: 2px;
+  --slider-thumb-radius: 2px;
+  --input-height: 32px;
+
+  /* Indentation guides */
+  --indentation-guide-width: 1px;
+
+  /* Footnotes */
+  --footnote-size: 0.8em;
+
+  /* Popover — Comfortable preview */
+  --popover-width: 450px;
+  --popover-max-height: 500px;
+  --popover-font-size: 0.92em;
+
+  /* Clickable icon — Comfortable hit target */
+  --clickable-icon-radius: 4px;
+}
+
+/* ======================
+   2. DARK MODE COLORS
+   All color overrides under .theme-dark per guidelines
+   ====================== */
+.theme-dark {
+  /* Base palette — AMOLED with warm cabin undertones */
+  --color-base-00: #000000;
+  --color-base-05: #020201;
+  --color-base-10: #080604;
+  --color-base-20: #100c08;
+  --color-base-25: #16110c;
+  --color-base-30: #1e1610;
+  --color-base-35: #28201a;
+  --color-base-40: #3d2d26;
+  --color-base-50: #56483e;
+  --color-base-60: #8a7e72;
+  --color-base-70: #a89e8f;
+  --color-base-100: #dcd6bc;
+
+  /* Accent — Burgundy */
+  --accent-h: 349;
+  --accent-s: 51%;
+  --accent-l: 36%;
+
+  /* Surfaces — Candlelit cabin depth */
+  --background-primary: #000000;
+  --background-primary-alt: #060402;
+  --background-secondary: #080604;
+  --background-secondary-alt: #0c0907;
+  --background-modifier-border: #2e2218;
+  --background-modifier-border-hover: #4a3628;
+  --background-modifier-border-focus: #8b2d3e;
+
+  /* Text — Warm parchment readability */
+  --text-normal: #ddd7be;
+  --text-muted: #8a7e72;
+  --text-faint: #56483e;
+  --text-accent: #c08497;
+  --text-accent-hover: #e0a4b7;
+  --text-on-accent: #ddd7be;
+
+  /* Interactive — Warm wood feel */
+  --interactive-accent: #8b2d3e;
+  --interactive-accent-hover: #a53d4f;
+  --interactive-normal: #100c08;
+  --interactive-hover: #1e1610;
+
+  /* Headings */
+  --h1-color: #c08497;
+  --h2-color: #c08497;
+  --h3-color: #b07585;
+  --h4-color: #a06575;
+  --h5-color: #906070;
+  --h6-color: #806060;
+
+  /* Blockquotes — Candlelit aside */
+  --blockquote-border-color: #6e3030;
+  --blockquote-border-thickness: 3px;
+  --blockquote-background-color: rgba(120, 70, 35, 0.07);
+  --blockquote-font-style: italic;
+  --blockquote-color: #c9c2a5;
+
+  /* Horizontal rule */
+  --hr-color: #8b2d3e;
+  --hr-thickness: 1px;
+
+  /* Checkboxes — Satisfying tactile */
+  --checkbox-color: #8b2d3e;
+  --checkbox-color-hover: #a53d4f;
+  --checkbox-border-color: #3d2d26;
+  --checkbox-border-color-hover: #8b2d3e;
+  --checkbox-marker-color: #ddd7be;
+
+  /* Tabs — Clear active indication */
+  --tab-background-active: #0c0907;
+  --tab-text-color: #8a7e72;
+  --tab-text-color-focused-active-current: #ddd7be;
+  --tab-container-background: #060402;
+  --tab-divider-color: #2e2218;
+  --tab-outline-color: #2e2218;
+
+  /* Navigation — Warm cabin shelf with clear feedback */
+  --nav-item-color: #a89e8f;
+  --nav-item-color-hover: #ddd7be;
+  --nav-item-color-active: #ddd7be;
+  --nav-item-color-selected: #ddd7be;
+  --nav-item-background-hover: rgba(120, 70, 35, 0.1);
+  --nav-item-background-active: rgba(139, 45, 62, 0.12);
+  --nav-item-weight-active: 700;
+  --nav-indentation-guide-color: #28201a;
+  --nav-item-padding: 4px 10px 4px 18px;
+
+  /* Scrollbar — Discreet warm track */
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #28201a;
+  --scrollbar-active-thumb-bg: #6e3030;
+
+  /* Tags — Warm ink labels */
+  --tag-color: #c08497;
+  --tag-color-hover: #e0a4b7;
+  --tag-background: rgba(120, 70, 35, 0.12);
+  --tag-background-hover: rgba(139, 45, 62, 0.18);
+
+  /* Bold / Italic */
+  --bold-color: #dcd6bc;
+  --italic-color: #c9c2a5;
+
+  /* Inline title — Warm chapter heading */
+  --inline-title-color: #c9a0a8;
+
+  /* Links */
+  --link-color: #c08497;
+  --link-color-hover: #e0a4b7;
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-decoration-thickness: 1px;
+  --link-unresolved-color: #806060;
+  --link-unresolved-opacity: 0.7;
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: #5a3a3d;
+  --link-external-color: #a06575;
+  --link-external-color-hover: #c08497;
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+
+  /* Code — Candlelit parchment tones */
+  --code-background: #0c0906;
+  --code-size: 0.88em;
+  --code-normal: #c9c2a5;
+  --code-comment: #5a5a4a;
+  --code-function: #c08497;
+  --code-important: #e0a4b7;
+  --code-keyword: #8b2d3e;
+  --code-operator: #8e8e8e;
+  --code-property: #a06575;
+  --code-punctuation: #5a5a4a;
+  --code-string: #9a7a5a;
+  --code-tag: #b07585;
+  --code-value: #906070;
+
+  /* Callouts — Warm note cards */
+  --callout-border-width: 1px;
+  --callout-border-opacity: 0.45;
+  --callout-title-weight: 600;
+  --callout-content-background: rgba(14, 10, 7, 0.6);
+  --callout-padding: 12px 16px;
+  --callout-title-padding: 8px 12px;
+  --callout-default: 139, 45, 62;
+  --callout-quote: 192, 132, 151;
+  --callout-tip: 139, 45, 62;
+  --callout-warning: 200, 150, 50;
+  --callout-error: 180, 40, 40;
+  --callout-info: 100, 120, 140;
+  --callout-success: 60, 120, 60;
+
+  /* Tables — Warm ledger */
+  --table-background: rgba(8, 6, 4, 0.5);
+  --table-border-color: #2e2218;
+  --table-border-width: 1px;
+  --table-header-background: rgba(120, 70, 35, 0.08);
+  --table-header-border-color: #6e3030;
+  --table-header-border-width: 1px;
+  --table-header-font: var(--font-interface-theme);
+  --table-header-weight: 600;
+  --table-header-color: #c9a0a8;
+  --table-text-color: var(--text-normal);
+  --table-row-background-hover: rgba(120, 70, 35, 0.06);
+  --table-row-alt-background: rgba(120, 70, 35, 0.025);
+
+  /* Tags — Wax seal labels */
+  --tag-border-color: #3d2d26;
+  --tag-border-color-hover: #6e3030;
+  --tag-border-width: 1px;
+  --tag-padding-x: 10px;
+  --tag-padding-y: 3px;
+  --tag-weight: 500;
+
+  /* Embeds — Warm inset fragment */
+  --embed-background: #080604;
+  --embed-border-start: 2px solid #3d2d26;
+  --embed-padding: 14px 18px;
+
+  /* Graph — Dark kingdom map */
+  --graph-text: #c9c2a5;
+  --graph-line: #3b2b2d;
+  --graph-node: #8b2d3e;
+  --graph-node-unresolved: #3b2b2d;
+  --graph-node-focused: #c08497;
+  --graph-node-tag: #a06575;
+  --graph-node-attachment: #5a3a3d;
+
+  /* Modal — Cozy popup */
+  --modal-background: #0c0907;
+  --modal-border-width: 1px;
+  --modal-border-color: #2e2218;
+
+  /* Divider — Subtle warm seam */
+  --divider-color: #1e1610;
+  --divider-color-hover: #6e3030;
+  --divider-width: 1px;
+
+  /* Ribbon — Warm iron rail */
+  --ribbon-background: #060402;
+  --ribbon-background-collapsed: #060402;
+
+  /* Status bar — Warm footer bar */
+  --status-bar-background: #060402;
+  --status-bar-border-color: #1e1610;
+  --status-bar-border-width: 1px;
+  --status-bar-text-color: #56483e;
+
+  /* Text selection */
+  --text-selection: rgba(139, 45, 62, 0.25);
+  --text-highlight-bg: rgba(192, 132, 151, 0.2);
+
+  /* Lists — Warm ink markers */
+  --list-marker-color: #6e3030;
+  --list-marker-color-hover: #c08497;
+  --list-marker-color-collapsed: #3d2d26;
+  --list-bullet-border: 1px solid #3d2d26;
+
+  /* Indentation guides — Vellum stitching */
+  --indentation-guide-color: #16110c;
+  --indentation-guide-color-active: #2e2218;
+
+  /* Titlebar / Window frame — Warm oak lintel */
+  --titlebar-background: #060402;
+  --titlebar-background-focused: #0c0907;
+  --titlebar-border-color: #1e1610;
+  --titlebar-border-width: 1px;
+  --titlebar-text-color: #56483e;
+  --titlebar-text-color-focused: #a89e8f;
+  --titlebar-text-weight: 600;
+
+  /* Vault profile — Owner's seal */
+  --vault-profile-font-weight: 600;
+  --vault-profile-color: #a89e8f;
+  --vault-profile-color-hover: #ddd7be;
+
+  /* Search — Clear candlelight highlight */
+  --search-result-background: rgba(180, 120, 50, 0.1);
+  --search-icon-color: #56483e;
+  --search-clear-button-color: #8a7e72;
+
+  /* Prompt / Command palette — Warm summon scroll */
+  --prompt-border-color: #2e2218;
+  --prompt-border-width: 1px;
+
+  /* Canvas — Warm workshop tapestry */
+  --canvas-background: #060402;
+  --canvas-dot-pattern: #1e1610;
+  --canvas-color-1: #8b2d3e;
+  --canvas-color-2: #a06575;
+  --canvas-color-3: #6e3030;
+  --canvas-color-4: #3d2d26;
+  --canvas-color-5: #c08497;
+  --canvas-color-6: #906070;
+
+  /* Properties / Metadata — Warm ledger index */
+  --metadata-background: #080604;
+  --metadata-border-color: #2e2218;
+  --metadata-border-radius: 4px;
+  --metadata-divider-color: #16110c;
+  --metadata-divider-color-hover: #2e2218;
+  --metadata-divider-color-focus: #6e3030;
+  --metadata-label-text-color: #8a7e72;
+  --metadata-label-text-color-hover: #c9a0a8;
+  --metadata-input-text-color: #ddd7be;
+  --metadata-property-background-hover: rgba(120, 70, 35, 0.06);
+  --metadata-property-background-active: rgba(120, 70, 35, 0.09);
+  --metadata-label-font-weight: 500;
+
+  /* Icons — Warm sigils */
+  --icon-color: #8a7e72;
+  --icon-color-hover: #ddd7be;
+  --icon-color-active: #c08497;
+  --icon-color-focused: #ddd7be;
+  --icon-opacity: 0.8;
+  --icon-opacity-hover: 1;
+  --icon-opacity-active: 1;
+
+  /* Toggle — Warm lever */
+  --toggle-thumb-color: #ddd7be;
+  --toggle-border-width: 1px;
+
+  /* Slider — Warm knob */
+  --slider-thumb-border-color: #6e3030;
+  --slider-track-background: #16110c;
+  --slider-thumb-height: 20px;
+  --slider-thumb-width: 12px;
+
+  /* Block embed */
+  --embed-block-shadow-hover: 0 2px 8px rgba(120, 70, 35, 0.12);
+
+  /* Workspace */
+  --workspace-background-translucent: rgba(0, 0, 0, 0.85);
+}
+
+/* ======================
+   3. DECORATIVE ELEMENTS
+   Minimal selectors, low specificity
+   ====================== */
+
+/* --- Horizontal Rule: Decorative Divider --- */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--interactive-accent), transparent);
+  margin: 3em 0;
+  position: relative;
+  overflow: visible;
+}
+
+hr::after {
+  content: "\2666";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-primary);
+  padding: 0 15px;
+  color: var(--interactive-accent);
+  font-size: 1.2em;
+}
+
+/* --- Buttons: Forged Metal --- */
+button.mod-cta {
+  background: linear-gradient(to bottom, var(--interactive-accent), #4a141d);
+  color: var(--text-normal);
+  border: 1px solid var(--color-base-30);
+  box-shadow: 2px 2px 0px #000;
+  font-family: var(--font-interface-theme);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button.mod-cta:hover {
+  background: var(--interactive-accent-hover);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #000;
+}
+
+/* --- Metadata container: Warm filing card --- */
+.metadata-container {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 16px;
+  background: var(--color-base-10);
+  box-shadow: inset 0 0 8px rgba(120, 70, 35, 0.05);
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+.metadata-container::before {
+  content: "\2042";
+  display: block;
+  text-align: center;
+  color: var(--interactive-accent);
+  opacity: 0.18;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+  letter-spacing: 0.5em;
+}
+
+/* --- Corner Ornaments --- */
+.workspace-split.mod-vertical.mod-root {
+  position: relative;
+}
+
+.workspace-split.mod-vertical.mod-root::before,
+.workspace-split.mod-vertical.mod-root::after {
+  content: "\2767";
+  position: absolute;
+  color: var(--interactive-accent);
+  opacity: 0.2;
+  font-size: 2em;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.workspace-split.mod-vertical.mod-root::before {
+  top: 10px;
+  left: 10px;
+}
+
+.workspace-split.mod-vertical.mod-root::after {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+/* --- Sidebar: Warm wooden panel with subtle texture --- */
+.workspace-tabs.mod-left-split,
+.workspace-tabs.mod-right-split {
+  background-image:
+    linear-gradient(rgba(6, 4, 2, 0.94), rgba(6, 4, 2, 0.94)),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 40 L20 0 L40 40" fill="none" stroke="%231e1610" stroke-width="0.8" opacity="0.7"/></svg>');
+  background-size: auto, 40px 40px;
+}
+
+/* --- Checkboxes: Diamond Shield with Sword --- */
+.task-list-item-checkbox {
+  appearance: none;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border: 1px solid var(--checkbox-border-color);
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  border-radius: var(--checkbox-radius);
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+
+.task-list-item-checkbox:hover {
+  border-color: var(--checkbox-border-color-hover);
+}
+
+.task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color);
+}
+
+.task-list-item-checkbox:checked::after {
+  content: "\2694";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  color: var(--checkbox-marker-color);
+  font-size: 11px;
+}
+
+/* --- Active Tab: Warm glow indicator --- */
+.workspace-tab-header.is-active {
+  border-top: 2px solid var(--interactive-accent);
+  box-shadow: 0 -2px 8px rgba(139, 45, 62, 0.1);
+  background: var(--color-base-10);
+}
+
+/* --- Scrollbar: Thin warm scroll rail --- */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-active-thumb-bg);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* --- Links: Warm ink & satisfying feedback --- */
+.markdown-rendered a.internal-link {
+  border-bottom: 1px dotted rgba(192, 132, 151, 0.4);
+  transition: border-color 0.25s ease-out, color 0.25s ease-out;
+}
+
+.markdown-rendered a.internal-link:hover {
+  border-bottom: 1px solid var(--link-color-hover);
+  color: var(--link-color-hover);
+}
+
+.markdown-rendered a.external-link::after {
+  content: " \2197";
+  font-size: 0.7em;
+  opacity: 0.4;
+  transition: opacity 0.2s ease-out;
+}
+
+.markdown-rendered a.external-link:hover::after {
+  opacity: 0.75;
+}
+
+/* --- Code blocks: Warm parchment ledger --- */
+.markdown-rendered pre {
+  border: 1px solid var(--background-modifier-border);
+  border-left: 3px solid rgba(110, 48, 48, 0.6);
+  padding: 16px 18px;
+  border-radius: 2px;
+}
+
+.markdown-rendered code {
+  padding: 2px 6px;
+  border: 1px solid rgba(46, 34, 24, 0.5);
+  background: var(--code-background);
+  border-radius: 2px;
+}
+
+/* --- Tables: Etched stone styling --- */
+.markdown-rendered table {
+  border-collapse: collapse;
+}
+
+.markdown-rendered th {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+}
+
+/* --- Callouts: Warm note card with cozy feel --- */
+.callout {
+  border-left: 3px solid rgba(var(--callout-color), 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.callout::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right,
+    rgba(var(--callout-color), 0.25),
+    transparent 70%);
+  pointer-events: none;
+}
+
+.callout-title {
+  font-family: var(--font-interface-theme);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85em;
+}
+
+/* --- Embeds: Warm inset manuscript --- */
+.markdown-rendered .internal-embed {
+  border: 1px solid var(--background-modifier-border);
+  border-left: 3px solid rgba(110, 48, 48, 0.5);
+  background: var(--color-base-10);
+  position: relative;
+  margin: 1.2em 0;
+  border-radius: 3px;
+}
+
+.markdown-rendered .internal-embed::before {
+  content: "\2767";
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  background: var(--background-primary);
+  padding: 0 6px;
+  color: var(--interactive-accent);
+  opacity: 0.2;
+  font-size: 0.8em;
+}
+
+/* --- Tags: Comfortable warm labels --- */
+.tag {
+  font-family: var(--font-interface-theme);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: var(--font-smallest);
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+/* --- Status bar: Aged iron --- */
+.status-bar {
+  font-family: var(--font-interface-theme);
+  letter-spacing: 0.05em;
+}
+
+/* --- Images: Warm framed painting on cabin wall --- */
+.markdown-rendered img:not(.emoji) {
+  border: 2px solid var(--background-modifier-border);
+  padding: 3px;
+  background: var(--color-base-10);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease-out;
+}
+
+.markdown-rendered img:not(.emoji):hover {
+  box-shadow: 0 4px 16px rgba(120, 70, 35, 0.2);
+  border-color: rgba(110, 48, 48, 0.6);
+}
+
+/* --- Highlighted text (==text==): Warm candlelight glow --- */
+.markdown-rendered mark {
+  background: rgba(180, 130, 50, 0.15);
+  color: #e0dac0;
+  padding: 1px 4px;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(180, 130, 50, 0.25);
+}
+
+/* --- Inline title: Ornamental flourish --- */
+.inline-title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  margin: 10px auto 0;
+  background: linear-gradient(to right,
+    transparent,
+    var(--interactive-accent),
+    transparent);
+}
+
+/* --- Smooth transitions: Satisfying cabin feedback --- */
+button.mod-cta, .clickable-icon {
+  transition: color 0.2s ease-out,
+              background-color 0.2s ease-out,
+              border-color 0.2s ease-out,
+              transform 0.15s ease-out;
+}
+
+.nav-file-title, .nav-folder-title {
+  transition: color 0.2s ease-out,
+              background-color 0.2s ease-out;
+}
+
+.workspace-tab-header {
+  transition: color 0.2s ease-out,
+              background 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+
+/* --- Table: Warm ledger divider --- */
+.markdown-rendered thead {
+  border-bottom: 2px solid rgba(110, 48, 48, 0.5);
+}
+
+/* --- Footnotes: Decorated separator --- */
+.footnotes {
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 3em;
+  padding-top: 1.5em;
+  position: relative;
+}
+
+.footnotes::before {
+  content: "\2042";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-primary);
+  padding: 0 12px;
+  color: var(--interactive-accent);
+  opacity: 0.35;
+  font-size: 0.9em;
+}
+
+/* --- Button: Satisfying press depth --- */
+button.mod-cta:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 0px #000;
+}
+
+/* --- Nav items: Warm hover glow, no layout shift --- */
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  transform: translateX(2px);
+}
+
+/* --- Focus ring: Visible keyboard nav for accessibility --- */
+:focus-visible {
+  outline: 2px solid rgba(139, 45, 62, 0.6);
+  outline-offset: 2px;
+}
+
+/* --- Completed task: Satisfying visual feedback --- */
+.task-list-item[data-task="x"],
+.task-list-item.is-checked {
+  opacity: 0.55;
+  text-decoration: line-through;
+  text-decoration-color: rgba(110, 48, 48, 0.5);
+}
+
+/* --- Clickable icons: Warm interactive glow --- */
+.clickable-icon:hover {
+  background: rgba(120, 70, 35, 0.1);
+}
+
+/* --- Popover preview: Warm cabin window --- */
+.popover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6),
+              0 0 1px rgba(110, 48, 48, 0.3);
+}
