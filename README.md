@@ -1,6 +1,6 @@
 # Arda
 
-A dark gothic AMOLED theme for [Obsidian](https://obsidian.md/). It's built around a medieval aesthetic, relying on warm parchment tones, burgundy accents, and manuscript-style decorative elements.
+A dark gothic AMOLED theme for [Obsidian](https://obsidian.md/). It's built around a medieval aesthetic, relying on warm parchment tones, burgundy accents, and manuscript-style decorative elements. Mainly made for myself, but I decided to share it with the community, because i think it looks cool.
 
 ![Screenshot](screenshot.png)
 
