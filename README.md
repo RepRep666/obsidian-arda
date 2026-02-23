@@ -1,44 +1,41 @@
 # Arda
 
-A dark gothic AMOLED theme for [Obsidian](https://obsidian.md/) inspired by the medieval aesthetic — warm parchment tones, burgundy accents, and decorative elements reminiscent of illuminated manuscripts.
+A dark gothic AMOLED theme for [Obsidian](https://obsidian.md/). It's built around a medieval aesthetic, relying on warm parchment tones, burgundy accents, and manuscript-style decorative elements.
 
 ![Screenshot](screenshot.png)
 
 ## Features
 
-- **True AMOLED black** backgrounds for battery savings and deep contrast
-- **Burgundy accent palette** with warm cabin undertones
-- **Medieval typography** — serif fonts, small-caps headings, diamond list markers
-- **Decorative elements** — ornamental horizontal rules, corner flourishes, sword checkboxes
-- **Warm code blocks** — parchment-toned syntax highlighting with ledger-style left border
-- **Gothic callouts** — warm note cards with subtle gradient accents
-- **Framed images** — warm bordered paintings with hover effects
-- **Etched tables** — stone-style table styling with warm headers
+- OLED-friendly true black backgrounds
+- UI animations for hover states, modals, and callouts
+- A core burgundy palette with warm undertones
+- Serif typography, small-caps headings, and diamond list markers
+- Ornamental styling like corner flourishes and sword checkboxes
+- Syntax highlighting styled after parchment ledgers
+- Callouts redesigned as warm note cards with subtle gradients
+- Image framing with 3D hover effects
+- Stone-etched table designs
 
 ## Installation
 
-### From Community Themes (recommended)
+### Community Themes (recommended)
 
-1. Open **Settings** → **Appearance** in Obsidian
-2. Under **Themes**, click **Manage**
-3. Search for **Arda**
-4. Click **Install and use**
+1. Open **Settings** -> **Appearance** in Obsidian.
+2. Click **Manage** under the **Themes** section.
+3. Search for **Arda**.
+4. Click **Install and use**.
 
-### Manual installation
+### Manual
 
-1. Download `theme.css` and `manifest.json` from the [latest release](https://github.com/RepRep666/obsidian-arda/releases/latest)
-2. Create a folder named `Arda` inside your vault's `.obsidian/themes/` directory
-3. Place both files inside the `Arda` folder
-4. Open **Settings** → **Appearance** and select **Arda** under Themes
+1. Download `theme.css` and `manifest.json` from the [releases page](https://github.com/RepRep666/obsidian-arda/releases/latest).
+2. Create an `Arda` folder in your vault's `.obsidian/themes/` directory.
+3. Drop both files into the new folder.
+4. Select **Arda** under the Themes menu in Appearance settings.
 
 ## Color modes
 
-- **Dark mode** only (AMOLED optimized)
-
-## Screenshots
-
-> **Note:** Add a screenshot (`screenshot.png`, 512×288 px recommended) to the root of the repository before submitting.
+- Dark mode only.
 
 ## License
 
-This theme is released under the [MIT License](LICENSE).
+MIT License. See [LICENSE](LICENSE) for details.

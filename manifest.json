@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
   "author": "RepRep666",
-  "authorUrl": "https://github.com/RepRep666"
+  "authorUrl": "https://github.com/RepRep666",
+  "modes": ["dark"]
 }

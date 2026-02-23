@@ -10,12 +10,13 @@
    ====================== */
 body {
   --font-text-size: 17px;
-  --font-interface-theme: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
-  --font-text-theme: 'Georgia', 'Garamond', 'Palatino Linotype', serif;
-  --font-monospace-theme: 'Courier New', monospace;
+  --font-interface-theme:
+    "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  --font-text-theme: "Georgia", "Garamond", "Palatino Linotype", serif;
+  --font-monospace-theme: "Courier New", monospace;
 
   /* Heading typography */
-  --h1-font: 'Palatino Linotype', 'Book Antiqua', serif;
+  --h1-font: "Palatino Linotype", "Book Antiqua", serif;
   --h2-font: var(--h1-font);
   --h3-font: var(--h1-font);
   --h4-font: var(--h1-font);
@@ -400,7 +401,12 @@ body {
 hr {
   border: none;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--interactive-accent), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--interactive-accent),
+    transparent
+  );
   margin: 3em 0;
   position: relative;
   overflow: visible;
@@ -490,7 +496,9 @@ button.mod-cta:hover {
   background-image:
     linear-gradient(rgba(6, 4, 2, 0.94), rgba(6, 4, 2, 0.94)),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M0 40 L20 0 L40 40" fill="none" stroke="%231e1610" stroke-width="0.8" opacity="0.7"/></svg>');
-  background-size: auto, 40px 40px;
+  background-size:
+    auto,
+    40px 40px;
 }
 
 /* --- Checkboxes: Diamond Shield with Sword --- */
@@ -505,8 +513,9 @@ button.mod-cta:hover {
   transform: rotate(45deg);
   margin-right: 10px;
   border-radius: var(--checkbox-radius);
-  transition: background-color 0.2s ease-out,
-              border-color 0.2s ease-out;
+  transition:
+    background-color 0.2s ease-out,
+    border-color 0.2s ease-out;
 }
 
 .task-list-item-checkbox:hover {
@@ -555,7 +564,9 @@ button.mod-cta:hover {
 /* --- Links: Warm ink & satisfying feedback --- */
 .markdown-rendered a.internal-link {
   border-bottom: 1px dotted rgba(192, 132, 151, 0.4);
-  transition: border-color 0.25s ease-out, color 0.25s ease-out;
+  transition:
+    border-color 0.25s ease-out,
+    color 0.25s ease-out;
 }
 
 .markdown-rendered a.internal-link:hover {
@@ -614,9 +625,11 @@ button.mod-cta:hover {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right,
+  background: linear-gradient(
+    to right,
     rgba(var(--callout-color), 0.25),
-    transparent 70%);
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -655,9 +668,10 @@ button.mod-cta:hover {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: var(--font-smallest);
-  transition: background-color 0.2s ease-out,
-              border-color 0.2s ease-out,
-              color 0.2s ease-out;
+  transition:
+    background-color 0.2s ease-out,
+    border-color 0.2s ease-out,
+    color 0.2s ease-out;
 }
 
 /* --- Status bar: Aged iron --- */
@@ -667,7 +681,8 @@ button.mod-cta:hover {
 }
 
 /* --- Images: Warm framed painting on cabin wall --- */
-.markdown-rendered img:not(.emoji) {
+.markdown-rendered img:not(.emoji),
+.cm-editor img:not(.emoji) {
   border: 2px solid var(--background-modifier-border);
   padding: 3px;
   background: var(--color-base-10);
@@ -676,7 +691,8 @@ button.mod-cta:hover {
   transition: border-color 0.3s ease-out;
 }
 
-.markdown-rendered img:not(.emoji):hover {
+.markdown-rendered img:not(.emoji):hover,
+.cm-editor img:not(.emoji):hover {
   box-shadow: 0 4px 16px rgba(120, 70, 35, 0.2);
   border-color: rgba(110, 48, 48, 0.6);
 }
@@ -697,29 +713,12 @@ button.mod-cta:hover {
   width: 50%;
   height: 1px;
   margin: 10px auto 0;
-  background: linear-gradient(to right,
+  background: linear-gradient(
+    to right,
     transparent,
     var(--interactive-accent),
-    transparent);
-}
-
-/* --- Smooth transitions: Satisfying cabin feedback --- */
-button.mod-cta, .clickable-icon {
-  transition: color 0.2s ease-out,
-              background-color 0.2s ease-out,
-              border-color 0.2s ease-out,
-              transform 0.15s ease-out;
-}
-
-.nav-file-title, .nav-folder-title {
-  transition: color 0.2s ease-out,
-              background-color 0.2s ease-out;
-}
-
-.workspace-tab-header {
-  transition: color 0.2s ease-out,
-              background 0.2s ease-out,
-              border-color 0.2s ease-out;
+    transparent
+  );
 }
 
 /* --- Table: Warm ledger divider --- */
@@ -748,39 +747,367 @@ button.mod-cta, .clickable-icon {
   font-size: 0.9em;
 }
 
-/* --- Button: Satisfying press depth --- */
-button.mod-cta:active {
-  transform: translateY(1px);
-  box-shadow: 1px 1px 0px #000;
-}
-
-/* --- Nav items: Warm hover glow, no layout shift --- */
-.nav-file-title:hover,
-.nav-folder-title:hover {
-  transform: translateX(2px);
-}
-
 /* --- Focus ring: Visible keyboard nav for accessibility --- */
 :focus-visible {
   outline: 2px solid rgba(139, 45, 62, 0.6);
   outline-offset: 2px;
 }
 
-/* --- Completed task: Satisfying visual feedback --- */
+/* --- Popover preview: Warm cabin window --- */
+.popover {
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.6),
+    0 0 1px rgba(110, 48, 48, 0.3);
+  animation: fadeInScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top left;
+}
+
+/* ======================
+   4. KINETIC EXPERIENCES & ANIMATIONS
+   Elevating the Obsidian UX with smooth motion
+   ====================== */
+
+/* --- Keyframes --- */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(3px);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.4) rotate(-45deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightGlow {
+  0% {
+    transform: translateX(0);
+    color: inherit;
+    box-shadow: inset 0 0 0 transparent;
+  }
+  100% {
+    transform: translateX(4px);
+    color: var(--text-accent-hover);
+    box-shadow: inset 2px 0 0 var(--interactive-accent);
+  }
+}
+
+@keyframes slideDownSlight {
+  0% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes subtlePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 45, 62, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(139, 45, 62, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 45, 62, 0);
+  }
+}
+
+@keyframes lineSlide {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* --- Global Transition Settings --- */
+* {
+  --anim-lively: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --anim-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --anim-cinematic: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Buttons: Cinematic depth --- */
+button.mod-cta {
+  transition: all var(--anim-smooth);
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+}
+
+button.mod-cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    3px 6px 16px rgba(139, 45, 62, 0.25),
+    2px 2px 0px #000;
+  filter: brightness(1.15);
+}
+
+button.mod-cta:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: 1px 1px 0px #000;
+  transition: all 0.1s ease-out;
+}
+
+/* --- Interactive Icons: Playful pop --- */
+.clickable-icon {
+  transition:
+    transform var(--anim-lively),
+    background-color 0.2s ease,
+    opacity 0.2s ease,
+    color 0.2s ease;
+  will-change: transform;
+}
+
+.clickable-icon:hover {
+  background: rgba(120, 70, 35, 0.15);
+  transform: scale(1.15) rotate(4deg);
+  color: var(--text-accent-hover);
+  opacity: 1;
+}
+
+.clickable-icon:active {
+  transform: scale(0.85) rotate(-4deg);
+  transition: transform 0.1s ease;
+}
+
+/* Dedicated Ribbon Hover Glow */
+.workspace-ribbon .clickable-icon:hover {
+  filter: drop-shadow(0 0 4px rgba(192, 132, 151, 0.5));
+  transform: scale(1.2) translateY(-2px);
+}
+
+/* --- File Navigation: Smooth slides --- */
+.nav-file-title,
+.nav-folder-title {
+  transition:
+    transform var(--anim-smooth),
+    background-color var(--anim-smooth),
+    color var(--anim-smooth),
+    box-shadow var(--anim-smooth);
+  box-shadow: inset 0 0 0 transparent;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background-color: var(--nav-item-background-hover);
+  transform: translateX(6px);
+  box-shadow: inset 2px 0 0 var(--interactive-accent-hover);
+  color: var(--text-accent-hover);
+}
+
+.nav-file-title.is-active {
+  animation: slideRightGlow var(--anim-smooth) forwards;
+}
+
+/* --- Workspace Tabs: Subtle depth --- */
+.workspace-tab-header {
+  transition:
+    background var(--anim-smooth),
+    transform var(--anim-smooth),
+    color var(--anim-smooth);
+}
+
+.workspace-tab-header:hover {
+  background: rgba(139, 45, 62, 0.05);
+  transform: translateY(-1px);
+}
+
+.workspace-tab-header.is-active {
+  animation: slideDownSlight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Tags: Wax seal pop --- */
+.tag {
+  transition: all var(--anim-lively);
+  display: inline-block;
+  will-change: transform;
+}
+
+.tag:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 12px rgba(139, 45, 62, 0.25);
+  border-color: var(--text-accent-hover);
+  color: var(--text-on-accent);
+  background-color: var(--tag-background-hover);
+}
+
+/* --- Callouts: Magnetic lift --- */
+.callout {
+  transition: all var(--anim-cinematic);
+  will-change: transform, box-shadow;
+}
+
+.callout:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.6),
+    0 4px 12px rgba(139, 45, 62, 0.12);
+  border-left-width: 5px;
+}
+
+/* --- Images in Notes: Gallery frame focus --- */
+.markdown-rendered img:not(.emoji) {
+  transition: all var(--anim-cinematic);
+  will-change: transform, box-shadow;
+}
+
+.markdown-rendered img:not(.emoji):hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(139, 45, 62, 0.25);
+  border-color: var(--interactive-accent);
+}
+
+/* --- Links: Animated internal underline --- */
+.markdown-rendered a.internal-link {
+  transition: color var(--anim-smooth);
+  position: relative;
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+.markdown-rendered a.internal-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--link-color-hover);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--anim-smooth);
+  border-radius: 2px;
+}
+
+.markdown-rendered a.internal-link:hover::after {
+  transform: scaleX(1);
+}
+
+.markdown-rendered a.internal-link:hover {
+  color: var(--link-color-hover);
+}
+
+/* --- Modals: Cinematic entrance --- */
+.modal-bg {
+  animation: fadeInOverlay var(--anim-smooth) forwards;
+}
+
+.modal {
+  animation: fadeInScaleUp var(--anim-cinematic) forwards;
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.9),
+    0 0 0 1px var(--modal-border-color),
+    0 0 40px rgba(139, 45, 62, 0.1);
+}
+
+/* --- Checkboxes: Sword & Shield clash --- */
+.task-list-item-checkbox {
+  transition: all var(--anim-lively);
+}
+
+.task-list-item-checkbox:hover {
+  transform: rotate(45deg) scale(1.1);
+  box-shadow: 0 0 8px rgba(139, 45, 62, 0.3);
+}
+
+.task-list-item-checkbox:active {
+  transform: rotate(45deg) scale(0.85);
+}
+
+.task-list-item-checkbox:checked {
+  animation: subtlePulse 0.5s ease-out forwards;
+}
+
+.task-list-item-checkbox:checked::after {
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Completed task line-through animation */
+.task-list-item {
+  transition: opacity var(--anim-smooth);
+}
+
 .task-list-item[data-task="x"],
 .task-list-item.is-checked {
   opacity: 0.55;
-  text-decoration: line-through;
-  text-decoration-color: rgba(110, 48, 48, 0.5);
+  text-decoration: none; /* override natively so we can animate it */
+  position: relative;
 }
 
-/* --- Clickable icons: Warm interactive glow --- */
-.clickable-icon:hover {
-  background: rgba(120, 70, 35, 0.1);
+.task-list-item[data-task="x"]::after,
+.task-list-item.is-checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30px; /* offset checkbox */
+  right: 0;
+  height: 1px;
+  background-color: rgba(110, 48, 48, 0.6);
+  animation: lineSlide var(--anim-smooth) forwards;
+  transform-origin: left;
+  pointer-events: none;
 }
 
-/* --- Popover preview: Warm cabin window --- */
-.popover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6),
-              0 0 1px rgba(110, 48, 48, 0.3);
+/* --- Blockquotes: Deep interaction --- */
+.markdown-rendered blockquote {
+  transition: all var(--anim-smooth);
+  will-change: transform;
+}
+
+.markdown-rendered blockquote:hover {
+  background-color: rgba(139, 45, 62, 0.08); /* slight deep red tint */
+  border-left-color: var(--interactive-accent-hover);
+  transform: translateX(4px);
+}
+
+/* --- Search & Inputs: Focus states --- */
+input[type="text"],
+input[type="search"],
+textarea,
+.prompt-input {
+  transition: all var(--anim-smooth);
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+.prompt-input:focus {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 16px rgba(139, 45, 62, 0.15),
+    0 0 0 1px var(--interactive-accent);
+  background: rgba(12, 9, 7, 0.95);
 }
