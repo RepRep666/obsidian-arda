@@ -1,13 +1,3 @@
-/* ============================================================
-   ARDA — AMOLED Medieval Theme for Obsidian
-   A dark gothic theme with true black backgrounds,
-   burgundy accents, and medieval decorative elements.
-   ============================================================ */
-
-/* ======================
-   1. TYPOGRAPHY (body)
-   Non-color variables go under body per guidelines
-   ====================== */
 body {
   --font-text-size: 17px;
   --font-interface-theme:
@@ -15,7 +5,6 @@ body {
   --font-text-theme: "Georgia", "Garamond", "Palatino Linotype", serif;
   --font-monospace-theme: "Courier New", monospace;
 
-  /* Heading typography */
   --h1-font: "Palatino Linotype", "Book Antiqua", serif;
   --h2-font: var(--h1-font);
   --h3-font: var(--h1-font);
@@ -33,7 +22,6 @@ body {
   --h1-variant: small-caps;
   --h2-variant: small-caps;
 
-  /* Heading sizes — comfortable cozy scale */
   --h1-size: 2em;
   --h2-size: 1.6em;
   --h3-size: 1.3em;
@@ -47,18 +35,15 @@ body {
   --heading-spacing: 1.6em;
   --p-spacing: 0.85em;
 
-  /* Inline title — illuminated manuscript style */
   --inline-title-font: var(--h1-font);
   --inline-title-weight: 700;
   --inline-title-size: 2.4em;
   --inline-title-line-height: 1.2;
   --inline-title-variant: small-caps;
 
-  /* File layout — generous reading margins */
   --file-line-width: 720px;
   --file-margins: 2.5em;
 
-  /* Layout — sharp but with intentional rounding for comfort */
   --button-radius: 2px;
   --checkbox-radius: 0px;
   --modal-radius: 6px;
@@ -66,40 +51,29 @@ body {
   --callout-radius: 4px;
   --tab-radius: 4px;
 
-  /* Lists — Medieval diamond markers */
   --list-bullet-size: 5px;
   --list-bullet-radius: 0px;
   --list-bullet-transform: rotate(45deg);
   --list-spacing: 0.25em;
   --list-indent: 2em;
 
-  /* Input styling — Warm medieval edges */
   --input-radius: 2px;
   --toggle-radius: 2px;
   --slider-thumb-radius: 2px;
   --input-height: 32px;
 
-  /* Indentation guides */
   --indentation-guide-width: 1px;
 
-  /* Footnotes */
   --footnote-size: 0.8em;
 
-  /* Popover — Comfortable preview */
   --popover-width: 450px;
   --popover-max-height: 500px;
   --popover-font-size: 0.92em;
 
-  /* Clickable icon — Comfortable hit target */
   --clickable-icon-radius: 4px;
 }
 
-/* ======================
-   2. DARK MODE COLORS
-   All color overrides under .theme-dark per guidelines
-   ====================== */
 .theme-dark {
-  /* Base palette — AMOLED with warm cabin undertones */
   --color-base-00: #000000;
   --color-base-05: #020201;
   --color-base-10: #080604;
@@ -113,12 +87,10 @@ body {
   --color-base-70: #a89e8f;
   --color-base-100: #dcd6bc;
 
-  /* Accent — Burgundy */
   --accent-h: 349;
   --accent-s: 51%;
   --accent-l: 36%;
 
-  /* Surfaces — Candlelit cabin depth */
   --background-primary: #000000;
   --background-primary-alt: #060402;
   --background-secondary: #080604;
@@ -127,7 +99,6 @@ body {
   --background-modifier-border-hover: #4a3628;
   --background-modifier-border-focus: #8b2d3e;
 
-  /* Text — Warm parchment readability */
   --text-normal: #ddd7be;
   --text-muted: #8a7e72;
   --text-faint: #56483e;
@@ -135,13 +106,11 @@ body {
   --text-accent-hover: #e0a4b7;
   --text-on-accent: #ddd7be;
 
-  /* Interactive — Warm wood feel */
   --interactive-accent: #8b2d3e;
   --interactive-accent-hover: #a53d4f;
   --interactive-normal: #100c08;
   --interactive-hover: #1e1610;
 
-  /* Headings */
   --h1-color: #c08497;
   --h2-color: #c08497;
   --h3-color: #b07585;
@@ -149,25 +118,21 @@ body {
   --h5-color: #906070;
   --h6-color: #806060;
 
-  /* Blockquotes — Candlelit aside */
   --blockquote-border-color: #6e3030;
   --blockquote-border-thickness: 3px;
   --blockquote-background-color: rgba(120, 70, 35, 0.07);
   --blockquote-font-style: italic;
   --blockquote-color: #c9c2a5;
 
-  /* Horizontal rule */
   --hr-color: #8b2d3e;
   --hr-thickness: 1px;
 
-  /* Checkboxes — Satisfying tactile */
   --checkbox-color: #8b2d3e;
   --checkbox-color-hover: #a53d4f;
   --checkbox-border-color: #3d2d26;
   --checkbox-border-color-hover: #8b2d3e;
   --checkbox-marker-color: #ddd7be;
 
-  /* Tabs — Clear active indication */
   --tab-background-active: #0c0907;
   --tab-text-color: #8a7e72;
   --tab-text-color-focused-active-current: #ddd7be;
@@ -175,7 +140,6 @@ body {
   --tab-divider-color: #2e2218;
   --tab-outline-color: #2e2218;
 
-  /* Navigation — Warm cabin shelf with clear feedback */
   --nav-item-color: #a89e8f;
   --nav-item-color-hover: #ddd7be;
   --nav-item-color-active: #ddd7be;
@@ -186,25 +150,20 @@ body {
   --nav-indentation-guide-color: #28201a;
   --nav-item-padding: 4px 10px 4px 18px;
 
-  /* Scrollbar — Discreet warm track */
   --scrollbar-bg: transparent;
   --scrollbar-thumb-bg: #28201a;
   --scrollbar-active-thumb-bg: #6e3030;
 
-  /* Tags — Warm ink labels */
   --tag-color: #c08497;
   --tag-color-hover: #e0a4b7;
   --tag-background: rgba(120, 70, 35, 0.12);
   --tag-background-hover: rgba(139, 45, 62, 0.18);
 
-  /* Bold / Italic */
   --bold-color: #dcd6bc;
   --italic-color: #c9c2a5;
 
-  /* Inline title — Warm chapter heading */
   --inline-title-color: #c9a0a8;
 
-  /* Links */
   --link-color: #c08497;
   --link-color-hover: #e0a4b7;
   --link-decoration: none;
@@ -219,7 +178,6 @@ body {
   --link-external-decoration: underline;
   --link-external-decoration-hover: underline;
 
-  /* Code — Candlelit parchment tones */
   --code-background: #0c0906;
   --code-size: 0.88em;
   --code-normal: #c9c2a5;
@@ -234,7 +192,6 @@ body {
   --code-tag: #b07585;
   --code-value: #906070;
 
-  /* Callouts — Warm note cards */
   --callout-border-width: 1px;
   --callout-border-opacity: 0.45;
   --callout-title-weight: 600;
@@ -249,7 +206,6 @@ body {
   --callout-info: 100, 120, 140;
   --callout-success: 60, 120, 60;
 
-  /* Tables — Warm ledger */
   --table-background: rgba(8, 6, 4, 0.5);
   --table-border-color: #2e2218;
   --table-border-width: 1px;
@@ -263,7 +219,6 @@ body {
   --table-row-background-hover: rgba(120, 70, 35, 0.06);
   --table-row-alt-background: rgba(120, 70, 35, 0.025);
 
-  /* Tags — Wax seal labels */
   --tag-border-color: #3d2d26;
   --tag-border-color-hover: #6e3030;
   --tag-border-width: 1px;
@@ -271,12 +226,10 @@ body {
   --tag-padding-y: 3px;
   --tag-weight: 500;
 
-  /* Embeds — Warm inset fragment */
   --embed-background: #080604;
   --embed-border-start: 2px solid #3d2d26;
   --embed-padding: 14px 18px;
 
-  /* Graph — Dark kingdom map */
   --graph-text: #c9c2a5;
   --graph-line: #3b2b2d;
   --graph-node: #8b2d3e;
@@ -285,41 +238,33 @@ body {
   --graph-node-tag: #a06575;
   --graph-node-attachment: #5a3a3d;
 
-  /* Modal — Cozy popup */
   --modal-background: #0c0907;
   --modal-border-width: 1px;
   --modal-border-color: #2e2218;
 
-  /* Divider — Subtle warm seam */
   --divider-color: #1e1610;
   --divider-color-hover: #6e3030;
   --divider-width: 1px;
 
-  /* Ribbon — Warm iron rail */
   --ribbon-background: #060402;
   --ribbon-background-collapsed: #060402;
 
-  /* Status bar — Warm footer bar */
   --status-bar-background: #060402;
   --status-bar-border-color: #1e1610;
   --status-bar-border-width: 1px;
   --status-bar-text-color: #56483e;
 
-  /* Text selection */
   --text-selection: rgba(139, 45, 62, 0.25);
   --text-highlight-bg: rgba(192, 132, 151, 0.2);
 
-  /* Lists — Warm ink markers */
   --list-marker-color: #6e3030;
   --list-marker-color-hover: #c08497;
   --list-marker-color-collapsed: #3d2d26;
   --list-bullet-border: 1px solid #3d2d26;
 
-  /* Indentation guides — Vellum stitching */
   --indentation-guide-color: #16110c;
   --indentation-guide-color-active: #2e2218;
 
-  /* Titlebar / Window frame — Warm oak lintel */
   --titlebar-background: #060402;
   --titlebar-background-focused: #0c0907;
   --titlebar-border-color: #1e1610;
@@ -328,21 +273,17 @@ body {
   --titlebar-text-color-focused: #a89e8f;
   --titlebar-text-weight: 600;
 
-  /* Vault profile — Owner's seal */
   --vault-profile-font-weight: 600;
   --vault-profile-color: #a89e8f;
   --vault-profile-color-hover: #ddd7be;
 
-  /* Search — Clear candlelight highlight */
   --search-result-background: rgba(180, 120, 50, 0.1);
   --search-icon-color: #56483e;
   --search-clear-button-color: #8a7e72;
 
-  /* Prompt / Command palette — Warm summon scroll */
   --prompt-border-color: #2e2218;
   --prompt-border-width: 1px;
 
-  /* Canvas — Warm workshop tapestry */
   --canvas-background: #060402;
   --canvas-dot-pattern: #1e1610;
   --canvas-color-1: #8b2d3e;
@@ -352,7 +293,6 @@ body {
   --canvas-color-5: #c08497;
   --canvas-color-6: #906070;
 
-  /* Properties / Metadata — Warm ledger index */
   --metadata-background: #080604;
   --metadata-border-color: #2e2218;
   --metadata-border-radius: 4px;
@@ -366,7 +306,6 @@ body {
   --metadata-property-background-active: rgba(120, 70, 35, 0.09);
   --metadata-label-font-weight: 500;
 
-  /* Icons — Warm sigils */
   --icon-color: #8a7e72;
   --icon-color-hover: #ddd7be;
   --icon-color-active: #c08497;
@@ -375,29 +314,19 @@ body {
   --icon-opacity-hover: 1;
   --icon-opacity-active: 1;
 
-  /* Toggle — Warm lever */
   --toggle-thumb-color: #ddd7be;
   --toggle-border-width: 1px;
 
-  /* Slider — Warm knob */
   --slider-thumb-border-color: #6e3030;
   --slider-track-background: #16110c;
   --slider-thumb-height: 20px;
   --slider-thumb-width: 12px;
 
-  /* Block embed */
   --embed-block-shadow-hover: 0 2px 8px rgba(120, 70, 35, 0.12);
 
-  /* Workspace */
   --workspace-background-translucent: rgba(0, 0, 0, 0.85);
 }
 
-/* ======================
-   3. DECORATIVE ELEMENTS
-   Minimal selectors, low specificity
-   ====================== */
-
-/* --- Horizontal Rule: Decorative Divider --- */
 hr {
   border: none;
   height: 1px;
@@ -424,7 +353,6 @@ hr::after {
   font-size: 1.2em;
 }
 
-/* --- Buttons: Forged Metal --- */
 button.mod-cta {
   background: linear-gradient(to bottom, var(--interactive-accent), #4a141d);
   color: var(--text-normal);
@@ -441,7 +369,6 @@ button.mod-cta:hover {
   box-shadow: 3px 3px 0px #000;
 }
 
-/* --- Metadata container: Warm filing card --- */
 .metadata-container {
   border: 1px solid var(--background-modifier-border);
   border-radius: 4px;
@@ -463,7 +390,6 @@ button.mod-cta:hover {
   letter-spacing: 0.5em;
 }
 
-/* --- Corner Ornaments --- */
 .workspace-split.mod-vertical.mod-root {
   position: relative;
 }
@@ -490,7 +416,6 @@ button.mod-cta:hover {
   transform: rotate(180deg);
 }
 
-/* --- Sidebar: Warm wooden panel with subtle texture --- */
 .workspace-tabs.mod-left-split,
 .workspace-tabs.mod-right-split {
   background-image:
@@ -501,7 +426,6 @@ button.mod-cta:hover {
     40px 40px;
 }
 
-/* --- Checkboxes: Diamond Shield with Sword --- */
 .task-list-item-checkbox {
   appearance: none;
   width: var(--checkbox-size);
@@ -536,14 +460,12 @@ button.mod-cta:hover {
   font-size: 11px;
 }
 
-/* --- Active Tab: Warm glow indicator --- */
 .workspace-tab-header.is-active {
   border-top: 2px solid var(--interactive-accent);
   box-shadow: 0 -2px 8px rgba(139, 45, 62, 0.1);
   background: var(--color-base-10);
 }
 
-/* --- Scrollbar: Thin warm scroll rail --- */
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -561,7 +483,6 @@ button.mod-cta:hover {
   background-color: transparent;
 }
 
-/* --- Links: Warm ink & satisfying feedback --- */
 .markdown-rendered a.internal-link {
   border-bottom: 1px dotted rgba(192, 132, 151, 0.4);
   transition:
@@ -585,7 +506,6 @@ button.mod-cta:hover {
   opacity: 0.75;
 }
 
-/* --- Code blocks: Warm parchment ledger --- */
 .markdown-rendered pre {
   border: 1px solid var(--background-modifier-border);
   border-left: 3px solid rgba(110, 48, 48, 0.6);
@@ -600,7 +520,6 @@ button.mod-cta:hover {
   border-radius: 2px;
 }
 
-/* --- Tables: Etched stone styling --- */
 .markdown-rendered table {
   border-collapse: collapse;
 }
@@ -611,7 +530,6 @@ button.mod-cta:hover {
   font-size: 0.85em;
 }
 
-/* --- Callouts: Warm note card with cozy feel --- */
 .callout {
   border-left: 3px solid rgba(var(--callout-color), 0.5);
   position: relative;
@@ -640,7 +558,6 @@ button.mod-cta:hover {
   font-size: 0.85em;
 }
 
-/* --- Embeds: Warm inset manuscript --- */
 .markdown-rendered .internal-embed {
   border: 1px solid var(--background-modifier-border);
   border-left: 3px solid rgba(110, 48, 48, 0.5);
@@ -662,7 +579,6 @@ button.mod-cta:hover {
   font-size: 0.8em;
 }
 
-/* --- Tags: Comfortable warm labels --- */
 .tag {
   font-family: var(--font-interface-theme);
   text-transform: uppercase;
@@ -674,13 +590,11 @@ button.mod-cta:hover {
     color 0.2s ease-out;
 }
 
-/* --- Status bar: Aged iron --- */
 .status-bar {
   font-family: var(--font-interface-theme);
   letter-spacing: 0.05em;
 }
 
-/* --- Images: Warm framed painting on cabin wall --- */
 .markdown-rendered img:not(.emoji),
 .cm-editor img:not(.emoji) {
   border: 2px solid var(--background-modifier-border);
@@ -697,7 +611,6 @@ button.mod-cta:hover {
   border-color: rgba(110, 48, 48, 0.6);
 }
 
-/* --- Highlighted text (==text==): Warm candlelight glow --- */
 .markdown-rendered mark {
   background: rgba(180, 130, 50, 0.15);
   color: #e0dac0;
@@ -706,7 +619,6 @@ button.mod-cta:hover {
   border-bottom: 1px solid rgba(180, 130, 50, 0.25);
 }
 
-/* --- Inline title: Ornamental flourish --- */
 .inline-title::after {
   content: "";
   display: block;
@@ -721,12 +633,10 @@ button.mod-cta:hover {
   );
 }
 
-/* --- Table: Warm ledger divider --- */
 .markdown-rendered thead {
   border-bottom: 2px solid rgba(110, 48, 48, 0.5);
 }
 
-/* --- Footnotes: Decorated separator --- */
 .footnotes {
   border-top: 1px solid var(--background-modifier-border);
   margin-top: 3em;
@@ -747,13 +657,11 @@ button.mod-cta:hover {
   font-size: 0.9em;
 }
 
-/* --- Focus ring: Visible keyboard nav for accessibility --- */
 :focus-visible {
   outline: 2px solid rgba(139, 45, 62, 0.6);
   outline-offset: 2px;
 }
 
-/* --- Popover preview: Warm cabin window --- */
 .popover {
   box-shadow:
     0 8px 30px rgba(0, 0, 0, 0.6),
@@ -762,12 +670,6 @@ button.mod-cta:hover {
   transform-origin: top left;
 }
 
-/* ======================
-   4. KINETIC EXPERIENCES & ANIMATIONS
-   Elevating the Obsidian UX with smooth motion
-   ====================== */
-
-/* --- Keyframes --- */
 @keyframes fadeInScaleUp {
   0% {
     opacity: 0;
@@ -850,14 +752,12 @@ button.mod-cta:hover {
   }
 }
 
-/* --- Global Transition Settings --- */
 * {
   --anim-lively: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   --anim-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   --anim-cinematic: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- Buttons: Cinematic depth --- */
 button.mod-cta {
   transition: all var(--anim-smooth);
   position: relative;
@@ -879,7 +779,6 @@ button.mod-cta:active {
   transition: all 0.1s ease-out;
 }
 
-/* --- Interactive Icons: Playful pop --- */
 .clickable-icon {
   transition:
     transform var(--anim-lively),
@@ -901,13 +800,11 @@ button.mod-cta:active {
   transition: transform 0.1s ease;
 }
 
-/* Dedicated Ribbon Hover Glow */
 .workspace-ribbon .clickable-icon:hover {
   filter: drop-shadow(0 0 4px rgba(192, 132, 151, 0.5));
   transform: scale(1.2) translateY(-2px);
 }
 
-/* --- File Navigation: Smooth slides --- */
 .nav-file-title,
 .nav-folder-title {
   transition:
@@ -930,7 +827,6 @@ button.mod-cta:active {
   animation: slideRightGlow var(--anim-smooth) forwards;
 }
 
-/* --- Workspace Tabs: Subtle depth --- */
 .workspace-tab-header {
   transition:
     background var(--anim-smooth),
@@ -947,7 +843,6 @@ button.mod-cta:active {
   animation: slideDownSlight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* --- Tags: Wax seal pop --- */
 .tag {
   transition: all var(--anim-lively);
   display: inline-block;
@@ -962,7 +857,6 @@ button.mod-cta:active {
   background-color: var(--tag-background-hover);
 }
 
-/* --- Callouts: Magnetic lift --- */
 .callout {
   transition: all var(--anim-cinematic);
   will-change: transform, box-shadow;
@@ -976,7 +870,6 @@ button.mod-cta:active {
   border-left-width: 5px;
 }
 
-/* --- Images in Notes: Gallery frame focus --- */
 .markdown-rendered img:not(.emoji) {
   transition: all var(--anim-cinematic);
   will-change: transform, box-shadow;
@@ -990,7 +883,6 @@ button.mod-cta:active {
   border-color: var(--interactive-accent);
 }
 
-/* --- Links: Animated internal underline --- */
 .markdown-rendered a.internal-link {
   transition: color var(--anim-smooth);
   position: relative;
@@ -1020,7 +912,6 @@ button.mod-cta:active {
   color: var(--link-color-hover);
 }
 
-/* --- Modals: Cinematic entrance --- */
 .modal-bg {
   animation: fadeInOverlay var(--anim-smooth) forwards;
 }
@@ -1033,7 +924,6 @@ button.mod-cta:active {
     0 0 40px rgba(139, 45, 62, 0.1);
 }
 
-/* --- Checkboxes: Sword & Shield clash --- */
 .task-list-item-checkbox {
   transition: all var(--anim-lively);
 }
@@ -1055,7 +945,6 @@ button.mod-cta:active {
   animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-/* Completed task line-through animation */
 .task-list-item {
   transition: opacity var(--anim-smooth);
 }
@@ -1081,7 +970,6 @@ button.mod-cta:active {
   pointer-events: none;
 }
 
-/* --- Blockquotes: Deep interaction --- */
 .markdown-rendered blockquote {
   transition: all var(--anim-smooth);
   will-change: transform;
@@ -1093,7 +981,6 @@ button.mod-cta:active {
   transform: translateX(4px);
 }
 
-/* --- Search & Inputs: Focus states --- */
 input[type="text"],
 input[type="search"],
 textarea,
