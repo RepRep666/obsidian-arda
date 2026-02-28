@@ -1,11 +1,21 @@
 body {
   --font-text-size: 17px;
-  --font-interface-theme:
-    "Palatino Linotype", "Book Antiqua", "Palatino", serif;
-  --font-text-theme: "Georgia", "Garamond", "Palatino Linotype", serif;
-  --font-monospace-theme: "Courier New", monospace;
+  
+  /* Modern Obsidian mapping */
+  --font-interface: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  --font-text: "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-monospace: "Courier New", monospace;
 
-  --h1-font: "Palatino Linotype", "Book Antiqua", serif;
+  /* Legacy theme variables mapping for compatibility */
+  --font-interface-theme: var(--font-interface);
+  --font-text-theme: var(--font-text);
+  --font-monospace-theme: var(--font-monospace);
+
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+
+  --h1-font: var(--font-interface);
   --h2-font: var(--h1-font);
   --h3-font: var(--h1-font);
   --h4-font: var(--h1-font);
@@ -19,8 +29,8 @@ body {
   --h5-weight: 500;
   --h6-weight: 500;
 
-  --h1-variant: small-caps;
-  --h2-variant: small-caps;
+  --h1-variant: normal;
+  --h2-variant: normal;
 
   --h1-size: 2em;
   --h2-size: 1.6em;
@@ -39,7 +49,7 @@ body {
   --inline-title-weight: 700;
   --inline-title-size: 2.4em;
   --inline-title-line-height: 1.2;
-  --inline-title-variant: small-caps;
+  --inline-title-variant: normal;
 
   --file-line-width: 720px;
   --file-margins: 2.5em;
